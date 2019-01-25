@@ -1,4 +1,5 @@
 from marshmallow import Schema, fields
+import simplejson
 
 
 class RoutePartSchema(Schema):
@@ -13,12 +14,17 @@ class RoutePartSchema(Schema):
 
     class Meta:
         ordered = True
+        json_tool = simplejson
 
 
 class RouteSchema(Schema):
     route = fields.List(fields.Nested(RoutePartSchema))
 
     time = fields.Int(dump_only=True)
+
+    class Meta:
+        ordered = True
+        json_tool = simplejson
 
 
 class PricingSchema(Schema):
@@ -29,6 +35,7 @@ class PricingSchema(Schema):
 
     class Meta:
         ordered = True
+        json_tool = simplejson
 
 
 class FlightSchema(Schema):
@@ -48,10 +55,14 @@ class FlightSchema(Schema):
 
     class Meta:
         ordered = True
+        json_tool = simplejson
 
 
 class FlightsSchema(Schema):
     flights = fields.List(fields.Nested(FlightSchema))
+
+    class Meta:
+        json_tool = simplejson
 
 
 class FlightsGeneralInfoSchema(Schema):
@@ -69,3 +80,4 @@ class FlightsGeneralInfoSchema(Schema):
 
     class Meta:
         ordered = True
+        json_tool = simplejson

@@ -12,4 +12,8 @@ Aviasales
 
 Запуск в режиме отладки
 ------------------------
-``python debug.py``
+``python -m debug.py``
+
+Запуск тестов
+-------------
+``python -m pytest tests``

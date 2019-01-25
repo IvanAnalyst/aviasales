@@ -25,10 +25,10 @@ class FlightsInfo:
     def get_xml(cls, **params):
         """Возвращает путь к xml файлу с информацией о перелетах."""
         if cls.is_round_trip_adult_flight(**params):
-            return FLIGHTS_INFO_DIR_PATH + 'round_trip_adult.xml'
+            return FLIGHTS_INFO_DIR_PATH + '/round_trip_adult.xml'
 
         if cls.is_one_way_with_child_and_infant_flight(**params):
-            return FLIGHTS_INFO_DIR_PATH + 'one_way_with_child_and_infant.xml'
+            return FLIGHTS_INFO_DIR_PATH + '/one_way_with_child_and_infant.xml'
 
         raise FlightsNotFound
 
