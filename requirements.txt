@@ -1,0 +1,5 @@
+lxml==4.3.0
+bottle==0.12.16
+gevent==1.4.0
+cachetools==3.0.0
+marshmallow==3.0.0rc3

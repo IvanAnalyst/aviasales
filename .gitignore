@@ -1,0 +1,7 @@
+.pycharm_helpers
+.cache
+.idea
+.venv*
+__pycache__
+*.py[cod]
+.pytest_cache/
